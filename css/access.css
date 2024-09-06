@@ -26,6 +26,14 @@ body{
     gap: .6em;
     animation: mostrar 1.5s ease-in-out;
 }
+.message {
+    margin-top: 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
 @keyframes mostrar{
     0%{
         opacity: 0;
@@ -96,6 +104,31 @@ body{
     transform: scale(1.2);
     transition: 1s;
 }
+
+#password_input {
+    color: black;
+}
+
+#user_input {
+    color: black;
+}
+
+/*---------------------- 
+    Pop-up Styles 
+----------------------*/
+
+#close {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+#close:hover {
+    color: #FF1B6B;
+}
+
+
+
 
 @media screen and (max-width: 379px) {
     .main_figure, .main_contact {
