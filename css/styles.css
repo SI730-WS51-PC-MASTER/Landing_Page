@@ -191,7 +191,7 @@ h1 {
 
 /*SECCION NOSOTROS*/
 
-.nosotros {
+.about_us {
     background-image: url('../img/nosotros_fondo.gif');
     background-size: cover;
     background-repeat: no-repeat;
@@ -244,7 +244,7 @@ h3 {
 
 /*SECCION SERVICIOS*/
 
-.servicios {
+.services {
     background-image: url('../img/servicios_fondo.gif');
     background-size: cover;
     background-repeat: no-repeat;
@@ -403,7 +403,7 @@ footer {
 }
 
 @media screen and (max-width: 1400px) {
-    .containerP {
+    .team_designer .containerP {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 2%;
