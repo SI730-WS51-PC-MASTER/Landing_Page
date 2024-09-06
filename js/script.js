@@ -28,7 +28,9 @@ const translations = {
         user_input: "User",
         password_input: "Password",
         log_in_submit: "Submit",
-        forgot_password: "Forgot your password?"
+        forgot_password: "Forgot your password?",
+        success_message: "Login successfully!",
+        alert_message: "Please enter both username and password."
     },
     es: {
         home: "Inicio",
@@ -58,7 +60,9 @@ const translations = {
         user_input: "Usuario",
         password_input: "Contraseña",
         log_in_submit: "Enviar",
-        forgot_password: "¿Olvidaste tu contraseña?"
+        forgot_password: "¿Olvidaste tu contraseña?",
+        success_message: "¡Inicio de sesión exitoso!",
+        alert_message: "Por favor, ingrese tanto el usuario como la contraseña."
     }
 };
 
@@ -121,4 +125,37 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(); // Aplicar el idioma almacenado
 
     document.getElementById('languageButton').addEventListener('click', changeLanguage); // Solo cambiar al hacer clic
+});
+
+// Adaptar mensaje y alerta en el idioma actual
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".main_form");
+    const messageDiv = document.querySelector(".message");
+    
+    // Oculta el mensaje al inicio
+    messageDiv.style.display = "none";
+    
+    // Evento cuando se presiona el botón "Submit"
+    form.addEventListener("submit", function(event) {
+        // Evita que el formulario se envíe
+        event.preventDefault();
+
+        // Verifica si ambos campos están llenos
+        const userInput = document.getElementById("user_input").value.trim();
+        const passwordInput = document.getElementById("password_input").value.trim();
+
+        if (userInput !== "" && passwordInput !== "") {
+            // Si ambos campos están llenos, muestra el mensaje de éxito en el idioma seleccionado
+            messageDiv.textContent = translations[language].success_message;
+            messageDiv.style.display = "block";
+            
+            // Ocultar el mensaje después de unos segundos
+            setTimeout(function() {
+                messageDiv.style.display = "none";
+            }, 5000); // Oculta el mensaje después de 5 segundos
+        } else {
+            // Muestra la alerta en el idioma seleccionado
+            alert(translations[language].alert_message);
+        }
+    });
 });
