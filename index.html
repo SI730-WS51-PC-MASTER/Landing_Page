@@ -4,9 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechMinds - PCMaster</title>
+
+    <!-- Titles Metatags -->
+    <title>PCMaster - PC Customization & High-performance hardware</title>
+    <meta name="title" content="PCMaster - PC Customization & High-performance hardware">
+    
+    <!-- Descriptions Metatags -->
+    <meta name="description" content="PCMaster">
+
+
+    <!-- Keywords Metatags -->
+    <meta name="keywords" content="PCMaster, PC customization, high-performance hardware, 
+    technology, gaming, PC components, hardware optimization">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script> <!-- Incluye el script.js -->
+
 </head>
+
 
 <body>
     <header>
@@ -15,11 +33,11 @@
                 <img src="img/logo.png" class="main_logo">
             </figure>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#" id="nosotros">Nosotros</a></li>
-                <li><a href="#" id="servicios">Servicios</a></li>
-                <li><a href="#" id="team_designer">The Team</a></li>
-                <li><a href="acceso.html" class="iniciar_sesion">INICIAR SESION</a></li>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#about-us-section" id="about_us">About Us</a></li>
+                <li><a href="#services-section" id="services">Services</a></li>
+                <li><a href="#team-designer-section" id="team_designer">The Team</a></li>
+                <li><a href="access.html" class="log_in">   LOG IN   </a></li>
             </ul>
             <div class="toggle-btn" id="toggleBtn">
                 <span class="bar"></span>
@@ -38,82 +56,79 @@
                 <div class="boxB col2">
                     <h1>TechMinds <br> PCMaster</h1>
                     <p id="txtBanner">
-                        Encuentra lo que te define <br> sin miedo al éxito
+                        Find what defines you <br> No fear of success
                     </p>
                     <p id="subtxtBanner">
-                        Solo unos cuantos clicks de distancia y encontrarás lo que buscas
+                        Just a few clicks away and you will find what you are looking for
                     </p>
                     <div class="boton_banner">
-                        <a href="acceso.html" class="btnBanner">COMENZAR</a>
+                        <a href="access.html" class="btnBanner" id="get_started">GET STARTED</a>
+                    </div>
+                    <div class="boton_banner">
+                        <button id="languageButton" class="btnBanner"><a>TRADUCIR AL ESPAÑOL</a></button>
                     </div>
                 </div>
             </div>
         </section>
         <!--NOSOTROS-->
-        <section class="nosotros">
+        <section class="about_us" id="about-us-section">
             <div class="subnosotros">
-                <h1>Nosotros</h1>
-                <p>
-                    Somos una startup dedicada a guiar a personas con poco conocimiento en hardware de computadoras <br>
-                    A través de nuestra página web y aplicación, ofrecemos recomendaciones personalizadas basadas en las
-                    necesidades<br> y presupuesto del usuario, buscando siempre los mejores precios y las mejores
-                    tiendas
+                <h1 id="title1">About Us</h1>
+                <p id="paragraph1">
+                    We are a startup dedicated to guiding people with little knowledge of computer hardware <br> Through our website and application, we offer personalized recommendations based on the user's needs and budget, always looking for the best prices and the best stores
                 </p>
             </div>
             <div class="containerS">
                 <div class="boxS">
                     <img src="img/mision.png" alt="">
-                    <h3>MISIÓN</h3>
-                    <p>
-                        Orientar y conectar a usuarios con el hardware ideal, respaldados por la transparencia y la
-                        educación
+                    <h3 id="title2">MISION</h3>
+                    <p id="paragraph2">
+                        Guide and connect users with the ideal hardware, backed by transparency and education
                     </p>
                 </div>
                 <div class="boxS">
                     <img src="img/vision.png" alt="">
-                    <h3>VISIÓN</h3>
-                    <p>
-                        Ser líderes referentes en el asesoramiento y elección de hardware para computadoras.
+                    <h3 id="title3">VISION</h3>
+                    <p id="paragraph3">
+                        To be leaders in the advice and selection of computer hardware
                     </p>
                 </div>
             </div>
         </section>
 
         <!--SERVICIOS-->
-        <section class="servicios">
+        <section class="services" id="services-section">
             <div class="subservicios">
-                <h1>Servicios</h1>
+                <h1 id="title4">Services</h1>
             </div>
             <div class="containerP">
                 <div class="boxP">
                     <img src="img/asesoramiento.png" alt="">
-                    <h3>Asesoramiento Personalizado</h3>
-                    <p>
-                        Recibe recomendaciones personalizadas de componentes de PC basadas en tu presupuesto y
-                        necesidades
+                    <h3 id="title5">Personalized Advice</h3>
+                    <p id="paragraph4">
+                        Get personalized PC component recommendations based on your budget and needs
                     </p>
                 </div>
                 <div class="boxP">
                     <img src="img/comparar.png" alt="">
-                    <h3>Comparación de Precios</h3>
-                    <p>
-                        Explora y compara precios de una amplia variedad de componentes en diferentes tiendas en línea
+                    <h3 id="title6">Price Comparison</h3>
+                    <p id="paragraph5">
+                        Explore and compare prices for a wide variety of components from different online stores
                     </p>
                 </div>
                 <div class="boxP">
                     <img src="img/deeplearning.png" alt="">
-                    <h3>Búsqueda Ampliada con Deep Learning</h3>
-                    <p>
-                        Amplía tus opciones con tecnología de Deep Learning, identificando productos incluso en
-                        publicaciones de redes sociales
+                    <h3 id="title7">Expanded Search with Deep Learning</h3>
+                    <p id="paragraph6">
+                        Expand your options with Deep Learning technology, identifying products even in social media posts
                     </p>
                 </div>
             </div>
         </section>
         <!--TEAM DESIGNER-->
-        <section class="team_designer">
+        <section class="team_designer" id="team-designer-section">
             <div class="subteam">
-                <h1>Team Designer</h1>
+                <h1 id="title8">The Team</h1>
             </div>
             <div class="containerP">
                 <div class="boxL" id="item1">
@@ -121,15 +136,15 @@
                     <h3>Aranda Vallejos, Oscar Gabriel</h3>
                 </div>
                 <div class="boxL" id="item2">
-                    <img src="https://i.postimg.cc/rwR832S8/users-icon-png-17.png" alt="">
+                    <img src="https://i.postimg.cc/D0qsXGxt/foto-alexander-797.jpg" alt="">
                     <h3>Cantoral Sedamano, Alexander Alberto</h3>
                 </div>
                 <div class="boxL" id="item3">
-                    <img src="https://i.postimg.cc/rwR832S8/users-icon-png-17.png" alt="">
+                    <img src="https://github.com/user-attachments/assets/9895e794-a88f-4436-a332-8d5c8112f9cb" alt="">
                     <h3>Chirinos Zúñiga, Rodrigo Manuel</h3>
                 </div>
                 <div class="boxL" id="item4">
-                    <img src="https://i.postimg.cc/rwR832S8/users-icon-png-17.png" alt="">
+                    <img src="https://intranet.upc.edu.pe/programas/Imagen/Fotos/Upc/0540202114793.jpg" alt="">
                     <h3>Soriano Medrano, Diego Martin</h3>
                 </div>
                 <div class="boxL" id="item5">

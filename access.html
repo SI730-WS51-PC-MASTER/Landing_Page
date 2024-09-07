@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sessión</title>
-    <link rel="stylesheet" href="css/acceso.css">
+    <title>Log In</title>
+    <link rel="stylesheet" href="css/access.css">
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script> <!-- Incluye el script.js -->
 </head>
 <body>
     <section class="main">
@@ -12,13 +14,13 @@
             <img src="img/logo.png" alt="" class="main_img">
         </figure>
         <div class="main_contact">
-            <h2 class="main_title">Iniciar Sesión</h2>
+            <h2 class="main_title">Log In</h2>
             <form action="" class="main_form">
-                <input type="text" placeholder="Usuario" class="main_input">
-                <input type="password" placeholder="Contraseña" class="main_input">
-                <input type="submit" value="Iniciar Sesión" class="main_input main_input--send">
+                <input type="text" placeholder="User" class="main_input" id="user_input">
+                <input type="password" placeholder="Password" class="main_input" id="password_input">
+                <input type="submit" value="Submit" class="main_input main_input--send" id="log_in_submit">
             </form>
-            <a href="#">¿Olvidaste tu contraseña?</a>
+            <a href="#" id="forgot_password">Forgot your password?</a>
             <article class="main_social">
                 <a href="https://www.facebook.com/" target="_blank" class="main_link">
                     <img src="img/facebook.png" alt="" class="main_icon">
@@ -30,6 +32,8 @@
                     <img src="img/twitter.png" alt="" class="main_icon">
                 </a>                
             </article>
+            <!--Login Succesfull Message-->
+            <div class="message"></div>
         </div>
     </section>
 </body>
