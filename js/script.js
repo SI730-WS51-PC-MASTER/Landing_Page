@@ -3,7 +3,6 @@ const translations = {
     en: {
         home: "Home",
         about_us: "About Us",
-        services: "Services",
         team_designer: "The Team",
         log_in: "   LOG IN   ",
         txtBanner: "Find what defines you <br> No fear of success",
@@ -35,7 +34,6 @@ const translations = {
     es: {
         home: "Inicio",
         about_us: "Nosotros",
-        services: "Servicios",
         team_designer: "El Equipo",
         log_in: "INICIAR SESION",
         txtBanner: "Encuentra lo que te define <br> sin miedo al éxito",
@@ -72,7 +70,6 @@ function applyLanguage() {
     if (document.getElementById('home')) {
         document.getElementById('home').innerHTML = translations[language].home;
         document.getElementById('about_us').innerHTML = translations[language].about_us;
-        document.getElementById('services').innerHTML = translations[language].services;
         document.getElementById('team_designer').innerHTML = translations[language].team_designer;
         document.getElementById('languageButton').innerHTML = translations[language].button;
         document.querySelector('.log_in').innerHTML = translations[language].log_in;
