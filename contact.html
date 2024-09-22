@@ -2,24 +2,49 @@
 <html lang="en">
 
 <head>
-  <title>Contact Us</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-  <!-- Fonts and Icons -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/contact.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Scripts -->
+    <script src="js/translations.js" defer></script> <!-- Incluye el translations.js -->
 </head>
 
-<body>
-  <section class="ftco-section img bg-hero" style="background-image: url(img/inicio_fondo.gif);">
+<body data-page="contact">
+
+  <header>
+    <nav>
+        <figure class="main_figure">
+            <img src="img/logo.png" class="main_logo">
+        </figure>
+        <ul>
+            <li><a href="index.html" id="home">Home</a></li>
+            <li><a href="about-us.html" id="about_us">About Us</a></li>
+            <li><a href="#" class="contact_us">Contact Us</a></li>
+            <li><a href="help-center.html" class="help_center">Help</a></li>
+            <li><a href="access.html" class="log_in">LOG IN</a></li>
+        </ul>
+        <div class="toggle-btn" id="toggleBtn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+  </header>
+
+  <section class="ftco-section img bg-hero banner">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6 text-center mb-5">
-          <h2 class="heading-section">Contact Us</h2>
+          <h1 class="heading-section" id="contact_title1">Contact Us</h1>
         </div>
       </div>
       <div class="row justify-content-center">
@@ -30,7 +55,7 @@
               <!-- Contact Information -->
               <div class="col-lg-6 d-flex align-items-stretch">
                 <div class="info-wrap w-100 p-5">
-                  <h3 class="mb-4">Find us</h3>
+                  <h3 class="mb-4" id="find_us">Find us</h3>
                   
                   <!-- Address -->
                   <div class="dbox w-100 d-flex align-items-start">
@@ -68,7 +93,7 @@
                       <span class="fa fa-globe"></span>
                     </div>
                     <div class="text pl-4">
-                      <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                      <p><span>Website</span> <a href="index.html">pcmaster.com</a></p>
                     </div>
                   </div>
 
@@ -78,7 +103,7 @@
               <!-- Contact Form -->
               <div class="col-lg-5">
                 <div class="contact-wrap w-100 p-md-5 p-4">
-                  <h3 class="mb-4">Get in touch</h3>
+                  <h3 class="mb-4" id="get_in_touch">Get in touch</h3>
                   <div id="form-message-warning" class="mb-4"></div>
                   <div id="form-message-success" class="mb-4">Your message was sent, thank you!</div>
                   
@@ -117,7 +142,7 @@
                       <!-- Submit Button -->
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="submit" value="Send Message" class="btn btn-primary">
+                          <input type="submit" value="Send Message" class="btn btn-primary" id="send_message">
                           <div class="submitting"></div>
                         </div>
                       </div>
@@ -135,7 +160,18 @@
     </div>
   </section>
 
-  <!-- Scripts -->  
+  <footer>
+    <div class="footer-container">
+        <small>
+            &copy; Designed by TechMinds Startup 2024
+            <br>
+        </small>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/menu.js"></script>  
   <script src="js/contact.js"></script>
 
 </body>
