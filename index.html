@@ -12,21 +12,18 @@
     <!-- Descriptions Metatags -->
     <meta name="description" content="PCMaster">
 
-
     <!-- Keywords Metatags -->
     <meta name="keywords" content="PCMaster, PC customization, high-performance hardware, 
     technology, gaming, PC components, hardware optimization">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <!-- Scripts -->
-    <script src="js/script.js" defer></script> <!-- Incluye el script.js -->
-
+    <script src="js/translations.js" defer></script> <!-- Incluye el translations.js -->
 </head>
 
-
-<body>
+<body data-page="index">
     <header>
         <nav>
             <figure class="main_figure">
@@ -34,10 +31,10 @@
             </figure>
             <ul>
                 <li><a href="#" id="home">Home</a></li>
-                <li><a href="#about-us-section" id="about_us">About Us</a></li>
-                <li><a href="#services-section" id="services">Services</a></li>
-                <li><a href="#team-designer-section" id="team_designer">The Team</a></li>
-                <li><a href="access.html" class="log_in">   LOG IN   </a></li>
+                <li><a href="about-us.html" id="about_us">About Us</a></li>
+                <li><a href="contact.html" class="contact_us">Contact Us</a></li>
+                <li><a href="help-center.html" class="help_center">Help</a></li>
+                <li><a href="access.html" class="log_in">LOG IN</a></li>
             </ul>
             <div class="toggle-btn" id="toggleBtn">
                 <span class="bar"></span>
@@ -70,89 +67,6 @@
                 </div>
             </div>
         </section>
-        <!--NOSOTROS-->
-        <section class="about_us" id="about-us-section">
-            <div class="subnosotros">
-                <h1 id="title1">About Us</h1>
-                <p id="paragraph1">
-                    We are a startup dedicated to guiding people with little knowledge of computer hardware <br> Through our website and application, we offer personalized recommendations based on the user's needs and budget, always looking for the best prices and the best stores
-                </p>
-            </div>
-            <div class="containerS">
-                <div class="boxS">
-                    <img src="img/mision.png" alt="">
-                    <h3 id="title2">MISION</h3>
-                    <p id="paragraph2">
-                        Guide and connect users with the ideal hardware, backed by transparency and education
-                    </p>
-                </div>
-                <div class="boxS">
-                    <img src="img/vision.png" alt="">
-                    <h3 id="title3">VISION</h3>
-                    <p id="paragraph3">
-                        To be leaders in the advice and selection of computer hardware
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!--SERVICIOS-->
-        <section class="services" id="services-section">
-            <div class="subservicios">
-                <h1 id="title4">Services</h1>
-            </div>
-            <div class="containerP">
-                <div class="boxP">
-                    <img src="img/asesoramiento.png" alt="">
-                    <h3 id="title5">Personalized Advice</h3>
-                    <p id="paragraph4">
-                        Get personalized PC component recommendations based on your budget and needs
-                    </p>
-                </div>
-                <div class="boxP">
-                    <img src="img/comparar.png" alt="">
-                    <h3 id="title6">Price Comparison</h3>
-                    <p id="paragraph5">
-                        Explore and compare prices for a wide variety of components from different online stores
-                    </p>
-                </div>
-                <div class="boxP">
-                    <img src="img/deeplearning.png" alt="">
-                    <h3 id="title7">Expanded Search with Deep Learning</h3>
-                    <p id="paragraph6">
-                        Expand your options with Deep Learning technology, identifying products even in social media posts
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!--TEAM DESIGNER-->
-        <section class="team_designer" id="team-designer-section">
-            <div class="subteam">
-                <h1 id="title8">The Team</h1>
-            </div>
-            <div class="containerP">
-                <div class="boxL" id="item1">
-                    <img src="https://i.postimg.cc/rwR832S8/users-icon-png-17.png" alt="">
-                    <h3>Aranda Vallejos, Oscar Gabriel</h3>
-                </div>
-                <div class="boxL" id="item2">
-                    <img src="https://i.postimg.cc/D0qsXGxt/foto-alexander-797.jpg" alt="">
-                    <h3>Cantoral Sedamano, Alexander Alberto</h3>
-                </div>
-                <div class="boxL" id="item3">
-                    <img src="https://github.com/user-attachments/assets/9895e794-a88f-4436-a332-8d5c8112f9cb" alt="">
-                    <h3>Chirinos Zúñiga, Rodrigo Manuel</h3>
-                </div>
-                <div class="boxL" id="item4">
-                    <img src="https://intranet.upc.edu.pe/programas/Imagen/Fotos/Upc/0540202114793.jpg" alt="">
-                    <h3>Soriano Medrano, Diego Martin</h3>
-                </div>
-                <div class="boxL" id="item5">
-                    <img src="https://i.postimg.cc/rwR832S8/users-icon-png-17.png" alt="">
-                    <h3>Tello Murga, Javier Oswaldo</h3>
-                </div> 
-            </div>
-        </section>
     </main>
     <footer>
         <div class="footer-container">
@@ -164,6 +78,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/menu.js"></script>
 
 </body>

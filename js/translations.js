@@ -1,18 +1,22 @@
 // Diccionario de traducciones
 const translations = {
+    // English
     en: {
+        /* nav */
         home: "Home",
         about_us: "About Us",
-        services: "Services",
-        team_designer: "The Team",
-        log_in: "   LOG IN   ",
+        contact_us: "Contact Us",
+        help_center: "Get help",
+        log_in: "LOG IN",
+        /* index.html */
         txtBanner: "Find what defines you <br> No fear of success",
         subtxtBanner: "Just a few clicks away and you will find what you are looking for",
         get_started: "GET STARTED",
-        button: "TRADUCIR AL ESPAÑOL",
+        button: "TRANSLATE TO SPANISH",
+        /* about-us.html */
         title1: "About Us",
         paragraph1: "We are a startup dedicated to guiding people with little knowledge of computer hardware <br> Through our website and application, we offer personalized recommendations based on the user's needs and budget, always looking for the best prices and the best stores",
-        title2: "MISION",
+        title2: "MISSION",
         paragraph2: "Guide and connect users with the ideal hardware, backed by transparency and education",
         title3: "VISION",
         paragraph3: "To be leaders in the advice and selection of computer hardware",
@@ -24,24 +28,34 @@ const translations = {
         title7: "Expanded Search with Deep Learning",
         paragraph6: "Expand your options with Deep Learning technology, identifying products even in social media posts",
         title8: "The Team",
+        /* access.html */
         main_title: "Log In",
         user_input: "User",
         password_input: "Password",
         log_in_submit: "Submit",
         forgot_password: "Forgot your password?",
         success_message: "Login successfully!",
-        alert_message: "Please enter both username and password."
+        alert_message: "Please enter both username and password.",
+        /* contact.html */
+        contact_title1: "Contact Us",
+        find_us: "Find us",
+        get_in_touch: "Get in touch",
+        send_message: "Send Message"
     },
+    // Spanish
     es: {
+        /* nav */
         home: "Inicio",
         about_us: "Nosotros",
-        services: "Servicios",
-        team_designer: "El Equipo",
-        log_in: "INICIAR SESION",
+        contact_us: "Contáctanos",
+        help_center: "Ayuda",
+        log_in: "INICIAR SESIÓN",
+        /* index.html */
         txtBanner: "Encuentra lo que te define <br> sin miedo al éxito",
-        subtxtBanner: "Solo unos cuantos clicks de distancia y encontrarás lo que buscas",
+        subtxtBanner: "Solo unos cuantos clics de distancia y encontrarás lo que buscas",
         get_started: "COMENZAR",
-        button: "TRANSLATE TO ENGLISH",
+        button: "TRADUCIR AL INGLÉS",
+        /* about-us.html */
         title1: "Nosotros",
         paragraph1: "Somos una startup dedicada a guiar a personas con poco conocimiento en hardware de computadoras <br> A través de nuestra página web y aplicación, ofrecemos recomendaciones personalizadas basadas en las necesidades <br> y presupuesto del usuario, buscando siempre los mejores precios y las mejores tiendas",
         title2: "MISIÓN",
@@ -56,29 +70,47 @@ const translations = {
         title7: "Búsqueda Ampliada con Deep Learning",
         paragraph6: "Amplía tus opciones con tecnología de Deep Learning, identificando productos incluso en publicaciones de redes sociales",
         title8: "El Equipo",
+        /* access.html */
         main_title: "Iniciar Sesión",
         user_input: "Usuario",
         password_input: "Contraseña",
         log_in_submit: "Enviar",
         forgot_password: "¿Olvidaste tu contraseña?",
         success_message: "¡Inicio de sesión exitoso!",
-        alert_message: "Por favor, ingrese tanto el usuario como la contraseña."
+        alert_message: "Por favor, ingrese tanto el usuario como la contraseña.",
+        /* contact.html */
+        contact_title1: "Contáctanos",
+        find_us: "Encuéntranos aquí",
+        get_in_touch: "Ponte en contacto",
+        send_message: "Enviar correo" 
     }
 };
 
-// Función para aplicar el idioma actual sin cambiarlo
+// Función para aplicar el idioma actual según la página
 function applyLanguage() {
-    // Actualizar el contenido en index.html (si existe)
-    if (document.getElementById('home')) {
-        document.getElementById('home').innerHTML = translations[language].home;
-        document.getElementById('about_us').innerHTML = translations[language].about_us;
-        document.getElementById('services').innerHTML = translations[language].services;
-        document.getElementById('team_designer').innerHTML = translations[language].team_designer;
+    const page = document.body.dataset.page; // Cada página debe tener su `data-page` en `<body>`
+
+    // Verifica si el nav existe antes de actualizarlo
+    const navHome = document.getElementById('home');
+    const navAboutUs = document.getElementById('about_us');
+    const navContactUs =  document.querySelector('.contact_us');
+    const navHelpCenter = document.querySelector('.help_center');
+    const navLogIn = document.querySelector('.log_in');
+
+    if (navHome) navHome.innerHTML = translations[language].home;
+    if (navAboutUs) navAboutUs.innerHTML = translations[language].about_us;
+    if (navContactUs) navContactUs.innerHTML = translations[language].contact_us;
+    if (navHelpCenter) navHelpCenter.innerHTML = translations[language].help_center;
+    if (navLogIn) navLogIn.innerHTML = translations[language].log_in;
+
+    if (page === 'index') {
         document.getElementById('languageButton').innerHTML = translations[language].button;
-        document.querySelector('.log_in').innerHTML = translations[language].log_in;
         document.getElementById('txtBanner').innerHTML = translations[language].txtBanner;
         document.getElementById('subtxtBanner').innerHTML = translations[language].subtxtBanner;
         document.getElementById('get_started').innerHTML = translations[language].get_started;
+    } 
+    
+    if (page === 'about-us') {
         document.getElementById('title1').innerHTML = translations[language].title1;
         document.getElementById('paragraph1').innerHTML = translations[language].paragraph1;
         document.getElementById('title2').innerHTML = translations[language].title2;
@@ -93,10 +125,17 @@ function applyLanguage() {
         document.getElementById('title7').innerHTML = translations[language].title7;
         document.getElementById('paragraph6').innerHTML = translations[language].paragraph6;
         document.getElementById('title8').innerHTML = translations[language].title8;
+    } 
+    if (page === 'contact') {
+        document.getElementById('contact_title1').innerHTML = translations[language].contact_title1;
+        document.getElementById('find_us').innerHTML = translations[language].find_us;
+        document.getElementById('get_in_touch').innerHTML = translations[language].get_in_touch;
+        document.getElementById('send_message').setAttribute('value', translations[language].send_message);
     }
+    if (page === 'help-center') {
 
-    // Actualizar el contenido en access.html (si existe)
-    if (document.querySelector('.main_title')) {
+    }
+    if (page === 'access') {
         document.querySelector('.main_title').innerHTML = translations[language].main_title;
         document.getElementById('user_input').setAttribute('placeholder', translations[language].user_input);
         document.getElementById('password_input').setAttribute('placeholder', translations[language].password_input);
@@ -114,48 +153,44 @@ function changeLanguage() {
 
 // Cargar idioma guardado al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    // Cambiar el valor predeterminado a 'en' (inglés)
     let savedLanguage = localStorage.getItem('selectedLanguage');
     if (!savedLanguage) {
-        // Si no hay idioma guardado, establece 'en' por defecto
-        savedLanguage = 'en';
-        localStorage.setItem('selectedLanguage', savedLanguage); // Guardar inglés como idioma predeterminado
+        savedLanguage = 'en'; // Idioma predeterminado
+        localStorage.setItem('selectedLanguage', savedLanguage);
     }
-    language = savedLanguage; // Establecer el idioma según lo guardado o predeterminado
-    applyLanguage(); // Aplicar el idioma almacenado
+    language = savedLanguage;
+    applyLanguage();
 
-    document.getElementById('languageButton').addEventListener('click', changeLanguage); // Solo cambiar al hacer clic
+    const languageButton = document.getElementById('languageButton');
+    if (languageButton) {
+        languageButton.addEventListener('click', changeLanguage);
+    }
 });
 
-// Adaptar mensaje y alerta en el idioma actual
+// Adaptar mensaje y alerta del login para el idioma seleccionado
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector(".main_form");
     const messageDiv = document.querySelector(".message");
     
-    // Oculta el mensaje al inicio
-    messageDiv.style.display = "none";
-    
-    // Evento cuando se presiona el botón "Submit"
-    form.addEventListener("submit", function(event) {
-        // Evita que el formulario se envíe
-        event.preventDefault();
+    if (form) {
+        messageDiv.style.display = "none";
+        
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
 
-        // Verifica si ambos campos están llenos
-        const userInput = document.getElementById("user_input").value.trim();
-        const passwordInput = document.getElementById("password_input").value.trim();
+            const userInput = document.getElementById("user_input").value.trim();
+            const passwordInput = document.getElementById("password_input").value.trim();
 
-        if (userInput !== "" && passwordInput !== "") {
-            // Si ambos campos están llenos, muestra el mensaje de éxito en el idioma seleccionado
-            messageDiv.textContent = translations[language].success_message;
-            messageDiv.style.display = "block";
-            
-            // Ocultar el mensaje después de unos segundos
-            setTimeout(function() {
-                messageDiv.style.display = "none";
-            }, 5000); // Oculta el mensaje después de 5 segundos
-        } else {
-            // Muestra la alerta en el idioma seleccionado
-            alert(translations[language].alert_message);
-        }
-    });
+            if (userInput !== "" && passwordInput !== "") {
+                messageDiv.textContent = translations[language].success_message;
+                messageDiv.style.display = "block";
+                
+                setTimeout(function() {
+                    messageDiv.style.display = "none";
+                }, 5000);
+            } else {
+                alert(translations[language].alert_message);
+            }
+        });
+    }
 });
