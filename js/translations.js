@@ -6,7 +6,7 @@ const translations = {
         home: "Home",
         about_us: "About Us",
         contact_us: "Contact Us",
-        help_center: "Pricing",
+        help_center: "Help Center",
         log_in: "LOG IN",
         /* index.html */
         txtBanner: "Find what defines you <br> No fear of success",
@@ -44,7 +44,10 @@ const translations = {
         /* pc-master-software section */
         software_title: "PC Master",
         software_description: "A hardware component search and support software that connects ordinary users with hardware technicians",
-        software_cta: "Don't know which components for your PC to choose?"
+        software_cta: "Don't know which components for your PC to choose?",
+        /* help-center.html */
+        help_center_title: "Our Plans",
+        doubt_quotes: "We help you resolve any questions you may have about the purchasing process, the components we use, payment methods, shipping, and everything you need to know before purchasing a product at PCMaster."
     },
     // Spanish
     es: {
@@ -52,7 +55,7 @@ const translations = {
         home: "Inicio",
         about_us: "Nosotros",
         contact_us: "Contáctanos",
-        help_center: "Precios",
+        help_center: "Ayuda",
         log_in: "INGRESAR",
         /* index.html */
         txtBanner: "Encuentra lo que te define <br> sin miedo al éxito",
@@ -90,7 +93,10 @@ const translations = {
         /* pc-master-software section */
         software_title: "PC Master",
         software_description: "Un software de búsqueda y soporte de componentes de hardware que conecta a usuarios comunes con técnicos de hardware",
-        software_cta: "¿No sabes qué componentes elegir para tu PC?" 
+        software_cta: "¿No sabes qué componentes elegir para tu PC?",
+        /* help-center.html */
+        help_center_title: "Centro de Ayuda",
+        doubt_quotes: "Te ayudamos a resolver las dudas sobre el proceso de compra, componentes que utilizamos, formas de pago, envíos, y todo lo necesario antes de adquirir un producto en PCMaster."
     }
 };
 
@@ -144,7 +150,8 @@ function applyLanguage() {
         document.getElementById('send_message').setAttribute('value', translations[language].send_message);
     }
     if (page === 'help-center') {
-
+        document.getElementById('help_center_title').innerHTML = translations[language].help_center_title;
+        document.querySelector('.doubt_quotes').innerHTML = translations[language].doubt_quotes;
     }
     if (page === 'access') {
         document.querySelector('.main_title').innerHTML = translations[language].main_title;
