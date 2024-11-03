@@ -153,6 +153,7 @@ h1 {
     font-size: 50px;
     color: #ffffff;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 #txtBanner {
@@ -199,7 +200,7 @@ h1 {
 
 /*Pie de Pagina - Footer*/
 footer {
-    background-color: #001014;
+    background-color: #1E1E1E;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -321,5 +322,197 @@ footer {
     }
 }
 
-/*  */
+/* Section for the product PC Master */
+
+/* Base styling */
+.pc-master-software {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.pc-master-software h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.software-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.partner-logos img {
+    width: 80px;
+    height: auto;
+    border: 2px solid #00ffff; /* Light blue border */
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+.software-display {
+    margin-bottom: 30px;
+}
+
+.display-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.software-cta {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.get-started-button {
+    background-color: #ff007b;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+
+/* Extra small devices (300px - 500px) */
+@media (max-width: 500px) {
+    .pc-master-software {
+        padding: 30px 15px;
+    }
+
+    .pc-master-software h2 {
+        font-size: 1.5em;
+    }
+
+    .software-description {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .partner-logos img {
+        width: 60px;
+    }
+
+    .display-image {
+        max-width: 90%;
+    }
+
+    .software-cta {
+        font-size: 1.2em;
+    }
+
+    .get-started-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Tablets (500px - 800px) */
+@media (min-width: 500px) and (max-width: 800px) {
+    .pc-master-software {
+        padding: 40px 20px;
+    }
+
+    .pc-master-software h2 {
+        font-size: 1.8em;
+    }
+
+    .software-description {
+        font-size: 1.1em;
+    }
+
+    .partner-logos img {
+        width: 70px;
+    }
+
+    .display-image {
+        max-width: 80%;
+    }
+
+    .software-cta {
+        font-size: 1.3em;
+    }
+
+    .get-started-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+/* Small laptops and desktops (800px - 1200px) */
+@media (min-width: 800px) and (max-width: 1200px) {
+    .pc-master-software {
+        padding: 50px 30px;
+    }
+
+    .pc-master-software h2 {
+        font-size: 2em;
+    }
+
+    .software-description {
+        font-size: 1.2em;
+    }
+
+    .partner-logos img {
+        width: 80px;
+    }
+
+    .display-image {
+        max-width: 70%;
+    }
+
+    .software-cta {
+        font-size: 1.4em;
+    }
+
+    .get-started-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+}
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .pc-master-software {
+        padding: 60px 40px;
+    }
+
+    .pc-master-software h2 {
+        font-size: 2.2em;
+    }
+
+    .software-description {
+        font-size: 1.3em;
+    }
+
+    .partner-logos img {
+        width: 90px;
+    }
+
+    .display-image {
+        max-width: 60%;
+    }
+
+    .software-cta {
+        font-size: 1.5em;
+    }
+
+    .get-started-button {
+        padding: 20px 35px;
+        font-size: 1.3em;
+    }
+}
+
 
