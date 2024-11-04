@@ -7,7 +7,7 @@
     <title>Log In</title>
     <link rel="stylesheet" href="css/access.css">
     <!-- Scripts -->
-    <script src="js/translations.js" defer></script> <!-- Incluye el translations.js -->
+    <script src="js/translations.js" defer></script> <!-- Include translations.js -->
 </head>
 
 <body data-page="access">
@@ -17,7 +17,7 @@
         </figure>
         <div class="main_contact">
             <h2 class="main_title">Log In</h2>
-            <form action="" class="main_form">
+            <form action="" class="main_form" onsubmit="return validateAndRedirect()">
                 <input type="text" placeholder="User" class="main_input" id="user_input">
                 <input type="password" placeholder="Password" class="main_input" id="password_input">
                 <input type="submit" value="Submit" class="main_input main_input--send" id="log_in_submit">
@@ -34,9 +34,38 @@
                     <img src="img/twitter.png" alt="" class="main_icon">
                 </a>                
             </article>
-            <!--Login Succesfull Message-->
-            <div class="message"></div>
+            <!-- Login Successful Message -->
+            <div class="message" id="success_message"></div>
         </div>
     </section>
+
+    <!-- Validation and Redirect Script -->
+    <script>
+        function validateAndRedirect() {
+            // Get input values
+            const userInput = document.getElementById('user_input').value;
+            const passwordInput = document.getElementById('password_input').value;
+            const successMessage = document.getElementById('success_message');
+
+            // Check if inputs are not empty
+            if (userInput && passwordInput) {
+                // Display success message
+                successMessage.textContent = "Login Successful!";
+                successMessage.style.color = "green";
+
+                // Redirect after a brief delay
+                setTimeout(() => {
+                    window.location.href = "https://apps-web-pc-master.web.app/home";
+                }, 1500); // Redirect after 1.5 seconds
+
+                return false; // Prevents form submission to keep user on the same page
+            } else {
+                // Display error message if inputs are empty
+                successMessage.textContent = "Please fill in both fields.";
+                successMessage.style.color = "red";
+                return false; // Prevent form submission
+            }
+        }
+    </script>
 </body>
 </html>
