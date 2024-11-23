@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function() {
             // Definir el texto para cada botón según el índice
             const texts = [
                 "PCMaster es una empresa dedicada a ensamblar equipos personalizados de alto rendimiento.",
-                "Este botón mostrará información sobre el proceso de ensamblaje.",
-                "Este botón mostrará información sobre las garantías.",
-                "Este botón mostrará información sobre los envíos internacionales.",
-                "Este botón mostrará información sobre las políticas de devolución.",
-                "Este botón mostrará los términos y condiciones de uso."
+                "Crear una plataforma que facilite a los usuarios sin conocimientos técnicos el proceso de búsqueda y comparación de componentes de hardware de forma sencilla y eficiente.",
+                "PCMaster ofrecerá un plan gratuito que permitirá servicios a distancia y un plan premium que permitirá servicios a domicilio",
+                "Para utilizar nuestra aplicación dirijite al apartado de login e ingresa a la app",
+                "Los usuarios podrán realizar una estimación del servicio y valor a los técnicos en un rango de 0 a 5 estrellas",
+                "Amazon, Zoom, Google"
             ];
 
             // Mostrar el texto correspondiente

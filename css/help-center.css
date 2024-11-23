@@ -94,10 +94,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    color: #ff1b6b;
-}
-
 /* Estilos para el botón activo */
 button.active {
     background-color: #ff1b6b;
