@@ -1,63 +1,29 @@
 const about_us = document.querySelector("#about-us-section");
-const services = document.querySelector("#services-section");
-const team_designer = document.querySelector("#team-designer-section");
-
-/*Menu NOSOTROS */
-about_us.addEventListener("click", (s) => {
-    s.preventDefault();
-
-    const sectionS = document.querySelector(".about_us");
-    sectionS.scrollIntoView({ behavior: "smooth" });
-})
-
-
-/*Menu SERVICIOS */
-services.addEventListener("click", (p) => {
-    p.preventDefault();
-
-    const sectionP = document.querySelector(".services");
-    sectionP.scrollIntoView({ behavior: "smooth" });
-})
-
-/*Menu TEAM DESIGNER */
-team_designer.addEventListener("click", (t) => {
-    t.preventDefault();
-
-    const sectionT = document.querySelector(".team_designer");
-    sectionT.scrollIntoView({ behavior: "smooth" });
-})
-
-
-/*Menu desplegable para dispositivos móviles*/
-
-/*
-document.addEventListener('DOMContentLoaded', function () {
-    var toggleBtn = document.getElementById('toggleBtn');
-    var navList = document.querySelector('nav ul');
-    var banner = document.querySelector('.banner'); // Selecciona el contenedor del banner
-
-    toggleBtn.addEventListener('click', function () {
-        navList.classList.toggle('show');
-        
-        // Ajusta el margen superior del banner dependiendo de si el menú está desplegado o no
-        if (navList.classList.contains('show')) {
-            banner.style.marginTop = '400px'; // Ajusta el margen superior del banner cuando el menú está abierto
-        } else {
-            banner.style.marginTop = '0'; // Restablece el margen cuando el menú está cerrado
-        }
+if (about_us) {
+    about_us.addEventListener("click", (s) => {
+        s.preventDefault();
+        const sectionS = document.querySelector(".about_us");
+        sectionS.scrollIntoView({ behavior: "smooth" });
     });
+}
 
-    // Cierra el menú y restaura el banner cuando se hace clic en un enlace del menú
-    var navLinks = document.querySelectorAll('nav ul li a');
-    for (var i = 0; i < navLinks.length; i++) {
-        navLinks[i].addEventListener('click', function () {
-            navList.classList.remove('show');
-            banner.style.marginTop = '0'; // Restablece el margen superior cuando el menú está cerrado
-        });
-    }
-});
-*/
+const services = document.querySelector("#services-section");
+if (services) {
+    services.addEventListener("click", (p) => {
+        p.preventDefault();
+        const sectionP = document.querySelector(".services");
+        sectionP.scrollIntoView({ behavior: "smooth" });
+    });
+}
 
+const team_designer = document.querySelector("#team-designer-section");
+if (team_designer) {
+    team_designer.addEventListener("click", (t) => {
+        t.preventDefault();
+        const sectionT = document.querySelector(".team_designer");
+        sectionT.scrollIntoView({ behavior: "smooth" });
+    });
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     var toggleBtn = document.getElementById('toggleBtn');
